@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+    int i,j,a,b=0,n,m;
+    printf("Enter the no elements you want in first array\n");
+    scanf("%d",&n);
+    int arr[n];
+    printf("Enter elements of first array\n");
+    for ( i = 0; i < n; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("Enter the no elements you want in second array\n");
+    scanf("%d",&m);
+    int arr2[m];
+    printf("Enter elements of second array\n");
+    for ( i = 0; i < m; i++)
+    {
+        scanf("%d",&arr2[i]);
+    }
+    for ( i = 0; i < n; i++)
+    {
+        a=arr[i];
+        b=0;
+        for ( j = 0; j < m; j++)
+        {
+            if (arr2[j]<=arr[i])
+            {
+                b=b+1;
+            }  
+        }
+        printf("The output of %d element of array is ",i);
+        printf("%d\n",b);
+    }
+    
+}
